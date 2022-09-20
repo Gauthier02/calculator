@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="app.css">
+    <title>Calculator</title>
+</head>
+<body>
+    <div class="box">
+
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+
+    </div>
+
+    <div class="calculator">
+        <div class="calcname">
+            <p class="text" data-text="Gauthier.com">Gauthier.com</p>
+        </div>
+
+        <form action="#" name="calcbody">
+
+            <input type="text" name="calcscreen" readonly="">
+            <div class="glowy"></div>
+
+            <div class="buttons">
+
+                <input type="button" value="CLR" class="clr" onclick="calcbody.calcscreen.value=''">
+
+                <input type="button" value="/" onclick="calcbody.calcscreen.value+='/'">
+
+                <input type="button" value="(" onclick="calcbody.calcscreen.value+='('">
+
+                <input type="button" value=")" onclick="calcbody.calcscreen.value+=')'">
+            </div>
+
+            <div class="buttons">
+                <input type="button" value="7" onclick="calcbody.calcscreen.value+='7'">
+
+                <input type="button" value="8" onclick="calcbody.calcscreen.value+='8/'">
+
+                <input type="button" value="9" onclick="calcbody.calcscreen.value+='9'">
+
+                <input type="button" value="*" onclick="calcbody.calcscreen.value+='*'">
+            </div>
+
+            <div class="buttons">
+                <input type="button" value="4" onclick="calcbody.calcscreen.value+='4'">
+
+                <input type="button" value="5" onclick="calcbody.calcscreen.value+='5'">
+
+                <input type="button" value="6" onclick="calcbody.calcscreen.value+='6'">
+
+                <input type="button" value="-" onclick="calcbody.calcscreen.value+='-'">
+            </div>
+
+            <div class="buttons">
+                <input type="button" value="1" onclick="calcbody.calcscreen.value+='1'">
+
+                <input type="button" value="2" onclick="calcbody.calcscreen.value+='2'">
+
+                <input type="button" value="3" onclick="calcbody.calcscreen.value+='3'">
+
+                <input type="button" value="+" onclick="calcbody.calcscreen.value+='+'">
+            </div>
+
+            <div class="buttons">
+                <input type="button" value="0" onclick="calcbody.calcscreen.value+='0'">
+
+                <input type="button" value="00" onclick="calcbody.calcscreen.value+='00'">
+
+                <input type="button" value="." onclick="calcbody.calcscreen.value+='.'">
+
+                <input type="button" value="=" class="equal" onclick="calcbody.calcscreen.value=eval(calcbody.calcscreen.value)">
+            </div>
+        </form>
+    </div>
+
+</body>
+</html>
