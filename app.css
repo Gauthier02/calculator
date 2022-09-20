@@ -1,0 +1,253 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(120deg, lightblue, steelBlue);
+    min-height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box{
+    width: 100%;
+    position: absolute;
+    bottom: 10px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.box span{
+    background-color: rgba(255, 255, 255, 0.1);
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    position: relative;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+    backdrop-filter: blur(5px);
+    animation: flow 5s linear infinite;
+    overflow: hidden;
+}
+
+@keyframes flow{
+    100%{
+        transform: translate(-1000px);
+    }
+}
+
+.box span:nth-child(1){
+    animation-delay: 1s;
+    transform: scale(1.6);
+}
+
+.box span:nth-child(2){
+    animation-delay: 0.6s;
+    transform: scale(1.2);
+}
+
+.box span:nth-child(3){
+    animation-delay: 1.5s;
+    transform: scale(2.9);
+}
+
+.box span:nth-child(4){
+    animation-delay: 1.5s;
+    transform: scale(2.1);
+}
+
+.box span:nth-child(5){
+    animation-delay: 1.8s;
+    transform: scale(1.2);
+}
+
+.box span:nth-child(6){
+    animation-delay: 1.1s;
+    transform: scale(3.2);
+}
+
+.box span:nth-child(7){
+    animation-delay: 0.4s;
+    transform: scale(0.2);
+}
+
+.box span::before{
+    content: "";
+    background: rgba(255, 255, 255, 0.15);
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 20%;
+    height: 110%;
+    transform: skew(45deg) translateX(70px);
+    animation: cooly 1s linear infinite;
+}
+
+@keyframes cooly{
+    100%{
+        transform: translateX(-50px);
+    }
+}
+
+.box span:nth-child(1)::before{
+    animation-delay: 1s;
+}
+
+.box span:nth-child(2)::before{
+    animation-delay: 0.6s;
+}
+
+.box span:nth-child(3)::before{
+    animation-delay: 1.5s;
+}
+
+.box span:nth-child(4)::before{
+    animation-delay: 0.3s;
+}
+
+.box span:nth-child(5)::before{
+    animation-delay: 1.4s;
+}
+
+.box span:nth-child(6)::before{
+    animation-delay: 1.9s;
+}
+
+.box span:nth-child(7)::before{
+    animation-delay: 1s;
+}
+
+.calculator{
+    background-color: rgba(255, 255, 255, 0.1);
+    width: 280px;
+    border-radius: 10px;
+    padding: 20px;
+    backdrop-filter: blur(6px);
+    box-shadow: 2px 2px 6px rgba(10, 15, 15, 0.15);
+    border-left: 1px solid rgba(255, 255, 255, 0.5);
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.calculator input[type="text"]{
+    width: 240px;
+    height: 80px;
+    outline: none;
+    border: 1px skyblue solid;
+    border-radius: 5px;
+    color: lightgreen;
+    text-align: right;
+    padding-right: 16px;
+    margin: 0 0 15px 0;
+    font-size: 30px;
+    background:gray;
+}
+
+.calculator input[type="button"]{
+    width: calc(100% / 4 - 4px);
+    height: 50px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    font-size: 20px;
+    color: white;
+    background: transparent;
+}
+
+.calculator input[type="button"]:hover{
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    border-radius: 40%;
+    color: yellow;
+}
+
+.calculator input[type="button"].clr{
+    color: red;
+}
+
+.calculator input[type="button"].equal{
+    color: green;
+    font-size: 30px;
+}
+
+.calcname{
+    width: 100%;
+    height: 60px;
+    display: flex;
+    text-align: 1eft;
+    font-size: 20px;
+}
+
+.text{
+    text-transform: uppercase;
+    font-family: 15px;
+    font-family: arial;
+    color: transparent;
+    letter-spacing: 5px;
+    position: relative;
+    -webkit-text-stroke: 1px;
+}
+
+.text::before{
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: orange;
+    -webkit-text-stroke: 2px orange;
+    width: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 10px solid green;
+    animation: text-fill 2s ease-in-out alternate infinite;
+}
+
+@keyframes text-fill{
+    100%{
+        width: 100%;
+        border-right: 1px solid white;
+    }
+}
+
+.glowy{
+    position: relative;
+    width: 15px;
+    height: 15px;
+    background: none;
+    margin-bottom: 15px;
+    border-radius: 50%;
+    animation: glowyy 1s linear infinite;
+}
+
+@keyframes glowyy{
+    0%{
+        background-color: lightblue;
+        transform: scale(0.5);
+    }
+
+    25%{
+        background-color: skyblue;
+        transform: scale(0.8);
+        box-shadow: 0.2px 0.2px 1px -2px yellow;
+    }
+
+    50%{
+        background-color: orange;
+        transform: scale(1.3);
+        box-shadow: 0.2px 0.2px 1px 1px lightgreen;
+    }
+
+    75%{
+        background-color: skyblue;
+        transform: scale(0.8);
+        box-shadow: 1px 1px 100px 10px lightgreen;
+    }
+
+    100%{
+        background-color: lightblue;
+        transform: scale(0.5);
+    }
+}
